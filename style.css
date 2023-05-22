@@ -1,0 +1,237 @@
+/* Custom Properties */
+:root {
+	--bg-color: hsl(56, 89%, 53%);
+	--txt-color: hsla(45, 100%, 2%, 1);
+	--logo-color: hsl(329, 84%, 56%);
+
+	/* Pallete */
+
+	--blue: hsl(191, 72%, 49%);
+	--orange: hsl(39, 89%, 55%);
+	--green: hsl(108, 51%, 59%);
+	--red: hsl(0, 71%, 51%);
+	--pink: hsl(323, 73%, 66%);
+
+	--ff-logo: "Anton", sans-serif;
+	--ff-main: "Roboto", sans-serif;
+
+	--fs-800: 3rem;
+	--fs-700: 2rem;
+	--fs-600: 1.5rem;
+}
+
+@media (min-width: 35em) {
+	:root {
+		--fs-800: 4rem;
+		--fs-600: 1.5rem;
+		--fs-400: 1rem;
+	}
+}
+
+@media (min-width: 45em) {
+	:root {
+		--fs-800: 7rem;
+		--fs-600: 3.25rem;
+		--fs-500: 1.75rem;
+		--fs-400: 1.25rem;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+}
+
+body {
+	margin: 0;
+	line-height: 1.5;
+	letter-spacing: 0.2em;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+	margin: 0;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	font-size: var(--fs-400);
+	font-family: var(--ff-main);
+	color: var(--logo-color);
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
+
+a:hover {
+	color: white;
+	border-bottom: 2px solid white;
+	transition: ease-in 0.2s;
+}
+
+.active {
+	border-bottom: 2px solid var(--logo-color);
+}
+
+article,
+.hero,
+.gallery {
+	height: 100svh;
+}
+
+.snap {
+	scroll-snap-align: start;
+}
+
+.space-small > * {
+	margin-top: 1.75rem;
+}
+
+.space-large > * {
+	margin-top: 3.5rem;
+}
+
+.primary-header {
+	padding: 1rem;
+	background: var(--bg-color);
+	box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.75);
+
+	position: sticky;
+	top: 0;
+}
+
+.logo {
+	font-family: var(--ff-logo);
+	font-size: var(--fs-400);
+	color: var(--logo-color);
+	text-transform: uppercase;
+}
+
+.primary-header__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: clamp(0.5rem, 5vw, 2rem);
+}
+
+.nav_wrapper {
+	width: min(65rem, 100% - 2rem);
+	margin-inline: auto;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: url("./Assets/e5ef1079-0877-4900-9506-848b876a91fa_g.jpg")
+		no-repeat bottom;
+	background-size: cover;
+}
+.hero_txt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--fs-800);
+	color: var(--logo-color);
+	text-transform: uppercase;
+	font-family: var(--ff-logo);
+	margin-bottom: 1em;
+	-webkit-text-stroke: 1px black;
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80ch;
+	text-align: justify;
+	font-size: var(--fs-500);
+	padding: 0.5em;
+}
+
+.quote {
+	text-align: center;
+	font-size: var(--fs-600);
+}
+
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slide-1 {
+	background: var(--blue)
+		url("./Assets/48_w1182~andy-warhol_self-portrait-1964-\(green\).jpg") center
+		no-repeat;
+	background-size: contain;
+	background-blend-mode: lighten;
+}
+
+.slide-2 {
+	background: var(--green) url("./Assets/100111_r19205_p646.jpg") center
+		no-repeat;
+	background-size: contain;
+	background-blend-mode: lighten;
+}
+
+.slide-3 {
+	background: var(--orange) url("./Assets/soupcan.png") center no-repeat;
+	background-size: contain;
+	background-blend-mode: lighten;
+}
+
+.slide-4 {
+	background: var(--red) url("./Assets/portrait.png") center no-repeat;
+	background-size: contain;
+	background-blend-mode: lighten;
+}
+
+.slide-5 {
+	background: var(--pink) url("./Assets/skull.jpeg") center no-repeat;
+	background-size: contain;
+	background-blend-mode: lighten;
+}
+
+.gallery {
+	background: var(--blue);
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg-color);
+	gap: clamp(0.5rem, 5vw, 2rem);
+	padding: 1.25em;
+}
